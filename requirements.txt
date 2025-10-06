@@ -1,0 +1,10 @@
+httpx==0.28.1
+matplotlib==3.10.6
+numpy==2.3.3
+openai==2.1.0
+pandas==2.3.3
+protobuf==6.32.1
+PyYAML==6.0.2
+PyYAML==6.0.3
+tqdm==4.67.1
+vllm==0.10.1.1

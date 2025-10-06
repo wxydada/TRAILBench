@@ -1,0 +1,752 @@
+[
+  {
+    "type": "function",
+    "function": {
+      "name": "Meituan_search_restaurant",
+      "description": "Meituan's restaurant search function based on location and restaurant name, aggregating merchant promotions and user reviews, suitable for quickly finding nearby restaurants.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "location": {
+            "type": "string",
+            "description": "Location name, not necessarily very precise"
+          },
+          "name": {
+            "type": "string",
+            "description": "Restaurant name"
+          },
+          "is_delivery": {
+            "type": "boolean",
+            "description": "Delivery or dine-in, it is True if delivery else False for dine-in"
+          },
+          "food": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of food names to order"
+          },
+          "order_by": {
+            "type": "string",
+            "enum": [
+              "default_sorting",
+              "rating_high_to_low",
+              "average_price_low_to_high",
+              "sales_high_to_Low",
+              "delivery_speed_fast_to_slow",
+              "distance_near_to_far",
+              "order_count_high_to_low"
+            ],
+            "description": "Sorting options: default_sorting ; rating_high_to_low ; average_price_low_to_high ; sales_high_to_Low ; delivery_speed_fast_to_slow ; distance_near_to_far and order_count_high_to_low, default is default_sorting",
+            "default": "default_sorting"
+          },
+          "min_price": {
+            "type": "number",
+            "description": "Minimum price"
+          },
+          "max_price": {
+            "type": "number",
+            "description": "Maximum price"
+          },
+          "meal_type": {
+            "type": "string",
+            "enum": [
+              "breakfast",
+              "lunch",
+              "afternoon_tea",
+              "dinner",
+              "night_snack"
+            ],
+            "description": "Meal type"
+          },
+          "disliked_foods": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Disliked foods, such as [\"coriander\", \"chili\"]"
+          }
+        },
+        "required": [
+          "name",
+          "is_delivery"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "Eleme_search_restaurant",
+      "description": "Eleme's restaurant search function based on location and restaurant name, focused on delivery services, designed for fast ordering and instant delivery needs.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "location": {
+            "type": "string",
+            "description": "Location name, not necessarily very precise"
+          },
+          "name": {
+            "type": "string",
+            "description": "Restaurant name"
+          },
+          "is_delivery": {
+            "type": "boolean",
+            "description": "Delivery or dine-in, it is True if delivery else False for dine-in"
+          },
+          "food": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of food names to order"
+          },
+          "order_by": {
+            "type": "string",
+            "enum": [
+              "default_sorting",
+              "rating_high_to_low",
+              "average_price_low_to_high",
+              "sales_high_to_Low",
+              "delivery_speed_fast_to_slow",
+              "distance_near_to_far",
+              "order_count_high_to_low"
+            ],
+            "description": "Sorting options: default_sorting ; rating_high_to_low ; average_price_low_to_high ; sales_high_to_Low ; delivery_speed_fast_to_slow ; distance_near_to_far and order_count_high_to_low, default is default_sorting",
+            "default": "default_sorting"
+          },
+          "min_price": {
+            "type": "number",
+            "description": "Minimum price"
+          },
+          "max_price": {
+            "type": "number",
+            "description": "Maximum price"
+          },
+          "meal_type": {
+            "type": "string",
+            "enum": [
+              "breakfast",
+              "lunch",
+              "afternoon_tea",
+              "dinner",
+              "night_snack"
+            ],
+            "description": "Meal type"
+          },
+          "disliked_foods": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Disliked foods, such as [\"coriander\", \"chili\"]"
+          }
+        },
+        "required": [
+          "name",
+          "is_delivery"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "TaobaoWaimai_search_restaurant",
+      "description": "Search for restaurants on the Taobao Waimai food delivery platform. It's especially useful for ordering meals online with convenient delivery options and many discounts and coupons",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "location": {
+            "type": "string",
+            "description": "Location name, not necessarily very precise"
+          },
+          "name": {
+            "type": "string",
+            "description": "Restaurant name"
+          },
+          "is_delivery": {
+            "type": "boolean",
+            "description": "Delivery or dine-in, it is True if delivery else False for dine-in"
+          },
+          "food": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of food names to order"
+          },
+          "order_by": {
+            "type": "string",
+            "enum": [
+              "default_sorting",
+              "rating_high_to_low",
+              "average_price_low_to_high",
+              "sales_high_to_Low",
+              "delivery_speed_fast_to_slow",
+              "distance_near_to_far",
+              "order_count_high_to_low"
+            ],
+            "description": "Sorting options: default_sorting ; rating_high_to_low ; average_price_low_to_high ; sales_high_to_Low ; delivery_speed_fast_to_slow ; distance_near_to_far and order_count_high_to_low, default is default_sorting",
+            "default": "default_sorting"
+          },
+          "min_price": {
+            "type": "number",
+            "description": "Minimum price"
+          },
+          "max_price": {
+            "type": "number",
+            "description": "Maximum price"
+          },
+          "meal_type": {
+            "type": "string",
+            "enum": [
+              "breakfast",
+              "lunch",
+              "afternoon_tea",
+              "dinner",
+              "night_snack"
+            ],
+            "description": "Meal type"
+          },
+          "disliked_foods": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Disliked foods, such as [\"coriander\", \"chili\"]"
+          }
+        },
+        "required": [
+          "name",
+          "is_delivery"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "JDWaimai_search_restaurant",
+      "description": "Search for restaurants on the JD Waimai food delivery service. This API allows users to discover nearby or popular dining options, helping them choose meals for delivery based on location, cuisine, or personal preferences.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "location": {
+            "type": "string",
+            "description": "Location name, not necessarily very precise"
+          },
+          "name": {
+            "type": "string",
+            "description": "Restaurant name"
+          },
+          "is_delivery": {
+            "type": "boolean",
+            "description": "Delivery or dine-in, it is True if delivery else False for dine-in"
+          },
+          "food": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of food names to order"
+          },
+          "order_by": {
+            "type": "string",
+            "enum": [
+              "default_sorting",
+              "rating_high_to_low",
+              "average_price_low_to_high",
+              "sales_high_to_Low",
+              "delivery_speed_fast_to_slow",
+              "distance_near_to_far",
+              "order_count_high_to_low"
+            ],
+            "description": "Sorting options: default_sorting ; rating_high_to_low ; average_price_low_to_high ; sales_high_to_Low ; delivery_speed_fast_to_slow ; distance_near_to_far and order_count_high_to_low, default is default_sorting",
+            "default": "default_sorting"
+          },
+          "min_price": {
+            "type": "number",
+            "description": "Minimum price"
+          },
+          "max_price": {
+            "type": "number",
+            "description": "Maximum price"
+          },
+          "meal_type": {
+            "type": "string",
+            "enum": [
+              "breakfast",
+              "lunch",
+              "afternoon_tea",
+              "dinner",
+              "night_snack"
+            ],
+            "description": "Meal type"
+          },
+          "disliked_foods": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Disliked foods, such as [\"coriander\", \"chili\"]"
+          }
+        },
+        "required": [
+          "name",
+          "is_delivery"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "KFC_search_restaurant",
+      "description": "KFC's exclusive in-app ordering function",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "location": {
+            "type": "string",
+            "description": "Location name, not necessarily very precise"
+          },
+          "name": {
+            "type": "string",
+            "description": "Restaurant name"
+          },
+          "is_delivery": {
+            "type": "boolean",
+            "description": "Delivery or dine-in, it is True if delivery else False for dine-in"
+          },
+          "food": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of food names to order"
+          },
+          "order_by": {
+            "type": "string",
+            "enum": [
+              "default_sorting",
+              "rating_high_to_low",
+              "average_price_low_to_high",
+              "sales_high_to_Low",
+              "delivery_speed_fast_to_slow",
+              "distance_near_to_far",
+              "order_count_high_to_low"
+            ],
+            "description": "Sorting options: default_sorting ; rating_high_to_low ; average_price_low_to_high ; sales_high_to_Low ; delivery_speed_fast_to_slow ; distance_near_to_far and order_count_high_to_low, default is default_sorting",
+            "default": "default_sorting"
+          },
+          "min_price": {
+            "type": "number",
+            "description": "Minimum price"
+          },
+          "max_price": {
+            "type": "number",
+            "description": "Maximum price"
+          },
+          "meal_type": {
+            "type": "string",
+            "enum": [
+              "breakfast",
+              "lunch",
+              "afternoon_tea",
+              "dinner",
+              "night_snack"
+            ],
+            "description": "Meal type"
+          },
+          "disliked_foods": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Disliked foods, such as [\"coriander\", \"chili\"]"
+          }
+        },
+        "required": [
+          "name",
+          "is_delivery"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "McDonalds_search_restaurant",
+      "description": "McDonald's exclusive in-app ordering function",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "location": {
+            "type": "string",
+            "description": "Location name, not necessarily very precise"
+          },
+          "name": {
+            "type": "string",
+            "description": "Restaurant name"
+          },
+          "is_delivery": {
+            "type": "boolean",
+            "description": "Delivery or dine-in, it is True if delivery else False for dine-in"
+          },
+          "food": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of food names to order"
+          },
+          "order_by": {
+            "type": "string",
+            "enum": [
+              "default_sorting",
+              "rating_high_to_low",
+              "average_price_low_to_high",
+              "sales_high_to_Low",
+              "delivery_speed_fast_to_slow",
+              "distance_near_to_far",
+              "order_count_high_to_low"
+            ],
+            "description": "Sorting options: default_sorting ; rating_high_to_low ; average_price_low_to_high ; sales_high_to_Low ; delivery_speed_fast_to_slow ; distance_near_to_far and order_count_high_to_low, default is default_sorting",
+            "default": "default_sorting"
+          },
+          "min_price": {
+            "type": "number",
+            "description": "Minimum price"
+          },
+          "max_price": {
+            "type": "number",
+            "description": "Maximum price"
+          },
+          "meal_type": {
+            "type": "string",
+            "enum": [
+              "breakfast",
+              "lunch",
+              "afternoon_tea",
+              "dinner",
+              "night_snack"
+            ],
+            "description": "Meal type"
+          },
+          "disliked_foods": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Disliked foods, such as [\"coriander\", \"chili\"]"
+          }
+        },
+        "required": [
+          "name",
+          "is_delivery"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "Meituan_recommend_restaurant",
+      "description": "Meituan's restaurant recommendation function, intelligently pushing popular local food based on location and preferences.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "location": {
+            "type": "string",
+            "description": "Location name, not necessarily very precise"
+          },
+          "is_delivery": {
+            "type": "boolean",
+            "description": "Delivery or dine-in, it is True if delivery else False for dine-in"
+          },
+          "food": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of food names to order"
+          },
+          "order_by": {
+            "type": "string",
+            "enum": [
+              "default_sorting",
+              "rating_high_to_low",
+              "average_price_low_to_high",
+              "sales_high_to_Low",
+              "delivery_speed_fast_to_slow",
+              "distance_near_to_far",
+              "order_count_high_to_low"
+            ],
+            "description": "Sorting options: default_sorting ; rating_high_to_low ; average_price_low_to_high ; sales_high_to_Low ; delivery_speed_fast_to_slow ; distance_near_to_far and order_count_high_to_low, default is default_sorting",
+            "default": "default_sorting"
+          },
+          "min_price": {
+            "type": "number",
+            "description": "Minimum price"
+          },
+          "max_price": {
+            "type": "number",
+            "description": "Maximum price"
+          },
+          "meal_type": {
+            "type": "string",
+            "enum": [
+              "breakfast",
+              "lunch",
+              "afternoon_tea",
+              "dinner",
+              "night_snack"
+            ],
+            "description": "Meal type"
+          },
+          "cuisine_type": {
+            "type": "string",
+            "description": "Preferred cuisine, such as Chinese, Japanese, Western etc."
+          },
+          "disliked_foods": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Disliked foods, such as [\"coriander\", \"chili\"]"
+          }
+        },
+        "required": [
+          "location",
+          "is_delivery"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "Eleme_recommend_restaurant",
+      "description": "Eleme's restaurant recommendation function, recommending restaurants based on delivery popularity and reputation.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "location": {
+            "type": "string",
+            "description": "Location name, not necessarily very precise"
+          },
+          "is_delivery": {
+            "type": "boolean",
+            "description": "Delivery or dine-in, it is True if delivery else False for dine-in"
+          },
+          "food": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of food names to order"
+          },
+          "order_by": {
+            "type": "string",
+            "enum": [
+              "default_sorting",
+              "rating_high_to_low",
+              "average_price_low_to_high",
+              "sales_high_to_Low",
+              "delivery_speed_fast_to_slow",
+              "distance_near_to_far",
+              "order_count_high_to_low"
+            ],
+            "description": "Sorting options: default_sorting ; rating_high_to_low ; average_price_low_to_high ; sales_high_to_Low ; delivery_speed_fast_to_slow ; distance_near_to_far and order_count_high_to_low, default is default_sorting",
+            "default": "default_sorting"
+          },
+          "min_price": {
+            "type": "number",
+            "description": "Minimum price"
+          },
+          "max_price": {
+            "type": "number",
+            "description": "Maximum price"
+          },
+          "meal_type": {
+            "type": "string",
+            "enum": [
+              "breakfast",
+              "lunch",
+              "afternoon_tea",
+              "dinner",
+              "night_snack"
+            ],
+            "description": "Meal type"
+          },
+          "cuisine_type": {
+            "type": "string",
+            "description": "Preferred cuisine, such as Chinese, Japanese, Western etc."
+          },
+          "disliked_foods": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Disliked foods, such as [\"coriander\", \"chili\"]"
+          }
+        },
+        "required": [
+          "location",
+          "is_delivery"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "JDWaimai_recommend_restaurant",
+      "description": "Get personalized restaurant recommendations from JD Waimai. This API suggests restaurants based on the user's location and food interests, making it easy to find popular or suitable delivery options without searching manually.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "location": {
+            "type": "string",
+            "description": "Location name, not necessarily very precise"
+          },
+          "is_delivery": {
+            "type": "boolean",
+            "description": "Delivery or dine-in, it is True if delivery else False for dine-in"
+          },
+          "food": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of food names to order"
+          },
+          "order_by": {
+            "type": "string",
+            "enum": [
+              "default_sorting",
+              "rating_high_to_low",
+              "average_price_low_to_high",
+              "sales_high_to_Low",
+              "delivery_speed_fast_to_slow",
+              "distance_near_to_far",
+              "order_count_high_to_low"
+            ],
+            "description": "Sorting options: default_sorting ; rating_high_to_low ; average_price_low_to_high ; sales_high_to_Low ; delivery_speed_fast_to_slow ; distance_near_to_far and order_count_high_to_low, default is default_sorting",
+            "default": "default_sorting"
+          },
+          "min_price": {
+            "type": "number",
+            "description": "Minimum price"
+          },
+          "max_price": {
+            "type": "number",
+            "description": "Maximum price"
+          },
+          "meal_type": {
+            "type": "string",
+            "enum": [
+              "breakfast",
+              "lunch",
+              "afternoon_tea",
+              "dinner",
+              "night_snack"
+            ],
+            "description": "Meal type"
+          },
+          "cuisine_type": {
+            "type": "string",
+            "description": "Preferred cuisine, such as Chinese, Japanese, Western etc."
+          },
+          "disliked_foods": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Disliked foods, such as [\"coriander\", \"chili\"]"
+          }
+        },
+        "required": [
+          "location",
+          "is_delivery"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "TaobaoWaimai_recommend_restaurant",
+      "description": "Taobao's restaurant recommendation function,Recommend nearby restaurants with many discounts and coupons. This API helps users find cheap and popular food delivery options on Taobao Waimai.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "location": {
+            "type": "string",
+            "description": "Location name, not necessarily very precise"
+          },
+          "is_delivery": {
+            "type": "boolean",
+            "description": "Delivery or dine-in, it is True if delivery else False for dine-in"
+          },
+          "food": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of food names to order"
+          },
+          "order_by": {
+            "type": "string",
+            "enum": [
+              "default_sorting",
+              "rating_high_to_low",
+              "average_price_low_to_high",
+              "sales_high_to_Low",
+              "delivery_speed_fast_to_slow",
+              "distance_near_to_far",
+              "order_count_high_to_low"
+            ],
+            "description": "Sorting options: default_sorting ; rating_high_to_low ; average_price_low_to_high ; sales_high_to_Low ; delivery_speed_fast_to_slow ; distance_near_to_far and order_count_high_to_low, default is default_sorting",
+            "default": "default_sorting"
+          },
+          "min_price": {
+            "type": "number",
+            "description": "Minimum price"
+          },
+          "max_price": {
+            "type": "number",
+            "description": "Maximum price"
+          },
+          "meal_type": {
+            "type": "string",
+            "enum": [
+              "breakfast",
+              "lunch",
+              "afternoon_tea",
+              "dinner",
+              "night_snack"
+            ],
+            "description": "Meal type"
+          },
+          "cuisine_type": {
+            "type": "string",
+            "description": "Preferred cuisine, such as Chinese, Japanese, Western etc."
+          },
+          "disliked_foods": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Disliked foods, such as [\"coriander\", \"chili\"]"
+          }
+        },
+        "required": [
+          "location",
+          "is_delivery"
+        ]
+      }
+    }
+  }
+]

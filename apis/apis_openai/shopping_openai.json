@@ -1,0 +1,149 @@
+[
+  {
+    "type": "function",
+    "function": {
+      "name": "Taobao_search_goods",
+      "description": "Taobao's product search function supports massive product retrieval and can intelligently recommend related products based on user preferences.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "keyword": {
+            "type": "string",
+            "description": "Search keyword"
+          },
+          "min_price": {
+            "type": "number",
+            "description": "Minimum price"
+          },
+          "max_price": {
+            "type": "number",
+            "description": "Maximum price"
+          },
+          "sort_by": {
+            "type": "string",
+            "enum": [
+              "comprehensive_ranking",
+              "sales_descending",
+              "price_ascending",
+              "price_descending",
+              "review_score_descending"
+            ],
+            "description": "Sorting method:  Default is comprehensive_ranking",
+            "default": "comprehensive_ranking"
+          },
+          "arrived_tomorrow": {
+            "type": "boolean",
+            "description": "arrived_tomorrow filter, it is True if only arrived_tomorrow products else False for all products (including non arrived_tomorrow)",
+            "default": false
+          },
+          "free_shipping": {
+            "type": "boolean",
+            "description": "Free shipping filter, it is True if only free shipping products else False for all products (including non-free shipping)",
+            "default": false
+          }
+        },
+        "required": [
+          "keyword"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "JD_search_goods",
+      "description": "JD's product search function, known for genuine product guarantees and fast delivery through efficient logistics, is particularly suitable for electronics and appliance categories.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "keyword": {
+            "type": "string",
+            "description": "Search keyword"
+          },
+          "min_price": {
+            "type": "number",
+            "description": "Minimum price"
+          },
+          "max_price": {
+            "type": "number",
+            "description": "Maximum price"
+          },
+          "sort_by": {
+            "type": "string",
+            "enum": [
+              "comprehensive_ranking",
+              "sales_descending",
+              "price_ascending",
+              "price_descending",
+              "review_score_descending"
+            ],
+            "description": "Sorting method:  Default is comprehensive_ranking",
+            "default": "comprehensive_ranking"
+          },
+          "arrived_tomorrow": {
+            "type": "boolean",
+            "description": "arrived_tomorrow filter, it is True if only arrived_tomorrow products else False for all products (including non arrived_tomorrow)",
+            "default": false
+          },
+          "free_shipping": {
+            "type": "boolean",
+            "description": "Free shipping filter, it is True if only free shipping products else False for all products (including non-free shipping)",
+            "default": false
+          }
+        },
+        "required": [
+          "keyword"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "Pinduoduo_search_goods",
+      "description": "Pinduoduo's product search function focuses on low-price product discovery, aggregating a massive selection of factory-direct and group-buying deals, ideal for price-conscious users.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "keyword": {
+            "type": "string",
+            "description": "Search keyword"
+          },
+          "min_price": {
+            "type": "number",
+            "description": "Minimum price"
+          },
+          "max_price": {
+            "type": "number",
+            "description": "Maximum price"
+          },
+          "sort_by": {
+            "type": "string",
+            "enum": [
+              "comprehensive_ranking",
+              "sales_descending",
+              "price_ascending",
+              "price_descending",
+              "review_score_descending"
+            ],
+            "description": "Sorting method:  Default is comprehensive_ranking",
+            "default": "comprehensive_ranking"
+          },
+          "arrived_tomorrow": {
+            "type": "boolean",
+            "description": "arrived_tomorrow filter, it is True if only arrived_tomorrow products else False for all products (including non arrived_tomorrow)",
+            "default": false
+          },
+          "free_shipping": {
+            "type": "boolean",
+            "description": "Free shipping filter, it is True if only free shipping products else False for all products (including non-free shipping)",
+            "default": false
+          }
+        },
+        "required": [
+          "keyword"
+        ]
+      }
+    }
+  }
+]

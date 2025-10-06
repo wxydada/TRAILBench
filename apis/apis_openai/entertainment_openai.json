@@ -1,0 +1,778 @@
+[
+  {
+    "type": "function",
+    "function": {
+      "name": "Bilibili_search_video",
+      "description": "Bilibili's video search function based on keywords, covering anime, creator content, and trending videos, ideal for youth-oriented interests.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "keyword": {
+            "type": "string",
+            "description": "Search keywords (e.g., video title, creator, tags, etc.)"
+          },
+          "category": {
+            "type": "string",
+            "enum": [
+              "comprehensive",
+              "live",
+              "movie",
+              "anime",
+              "tv_series"
+            ],
+            "description": "video categories"
+          },
+          "min_duration": {
+            "type": "number",
+            "description": "Minimum video duration (in minutes)"
+          },
+          "max_duration": {
+            "type": "number",
+            "description": "Maximum video duration (in minutes)"
+          },
+          "upload_date": {
+            "type": "string",
+            "enum": [
+              "no_limit",
+              "within_one_day",
+              "within_one_week",
+              "within_six_months"
+            ],
+            "description": "Upload date range",
+            "default": "no_limit"
+          },
+          "sort_by": {
+            "type": "string",
+            "enum": [
+              "latest",
+              "popular",
+              "high_views",
+              "comprehensive"
+            ],
+            "description": "Sorting options",
+            "default": "comprehensive"
+          }
+        },
+        "required": [
+          "keyword"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "Douyin_search_video",
+      "description": "Douyin's video search function based on keywords, offering short videos on trends, lifestyle, and entertainment, tailored for quick discovery.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "keyword": {
+            "type": "string",
+            "description": "Search keywords (e.g., video title, creator, tags, etc.)"
+          },
+          "category": {
+            "type": "string",
+            "enum": [
+              "comprehensive",
+              "live",
+              "video"
+            ],
+            "description": "video categories"
+          },
+          "min_duration": {
+            "type": "number",
+            "description": "Minimum video duration (in minutes)"
+          },
+          "max_duration": {
+            "type": "number",
+            "description": "Maximum video duration (in minutes)"
+          },
+          "upload_date": {
+            "type": "string",
+            "enum": [
+              "no_limit",
+              "within_one_day",
+              "within_one_week",
+              "within_six_months"
+            ],
+            "description": "Upload date range",
+            "default": "no_limit"
+          },
+          "sort_by": {
+            "type": "string",
+            "enum": [
+              "latest",
+              "popular",
+              "high_views",
+              "comprehensive"
+            ],
+            "description": "Sorting options",
+            "default": "comprehensive"
+          }
+        },
+        "required": [
+          "keyword"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "Kuaishou_search_video",
+      "description": "Kuaishou's video search function based on keywords, featuring short videos on daily life, talents, and local culture, focused on authentic and grassroots content discovery.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "keyword": {
+            "type": "string",
+            "description": "Search keywords (e.g., video title, creator, tags, etc.)"
+          },
+          "category": {
+            "type": "string",
+            "enum": [
+              "comprehensive",
+              "live",
+              "video"
+            ],
+            "description": "video categories"
+          },
+          "min_duration": {
+            "type": "number",
+            "description": "Minimum video duration (in minutes)"
+          },
+          "max_duration": {
+            "type": "number",
+            "description": "Maximum video duration (in minutes)"
+          },
+          "upload_date": {
+            "type": "string",
+            "enum": [
+              "no_limit",
+              "within_one_day",
+              "within_one_week",
+              "within_six_months"
+            ],
+            "description": "Upload date range",
+            "default": "no_limit"
+          },
+          "sort_by": {
+            "type": "string",
+            "enum": [
+              "latest",
+              "popular",
+              "high_views",
+              "comprehensive"
+            ],
+            "description": "Sorting options",
+            "default": "comprehensive"
+          }
+        },
+        "required": [
+          "keyword"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "IQIYI_search_video",
+      "description": "IQIYI's video search function based on keywords, providing access to movies, dramas, variety shows, and anime, optimized for professional and long-form content discovery.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "keyword": {
+            "type": "string",
+            "description": "Search keywords (e.g., video title, creator, tags, etc.)"
+          },
+          "category": {
+            "type": "string",
+            "enum": [
+              "comprehensive",
+              "live",
+              "movie",
+              "anime",
+              "tv_series"
+            ],
+            "description": "video categories"
+          },
+          "min_duration": {
+            "type": "number",
+            "description": "Minimum video duration (in minutes)"
+          },
+          "max_duration": {
+            "type": "number",
+            "description": "Maximum video duration (in minutes)"
+          },
+          "upload_date": {
+            "type": "string",
+            "enum": [
+              "no_limit",
+              "within_one_day",
+              "within_one_week",
+              "within_six_months"
+            ],
+            "description": "Upload date range",
+            "default": "no_limit"
+          },
+          "sort_by": {
+            "type": "string",
+            "enum": [
+              "latest",
+              "popular",
+              "high_views",
+              "comprehensive"
+            ],
+            "description": "Sorting options",
+            "default": "comprehensive"
+          }
+        },
+        "required": [
+          "keyword"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "TencentVideo_search_video",
+      "description": "Tencent Video's keyword search function, featuring popular dramas, movies, and exclusive originals, known for its strong IP and high-quality content.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "keyword": {
+            "type": "string",
+            "description": "Search keywords (e.g., video title, creator, tags, etc.)"
+          },
+          "category": {
+            "type": "string",
+            "enum": [
+              "comprehensive",
+              "live",
+              "movie",
+              "anime",
+              "tv_series"
+            ],
+            "description": "video categories"
+          },
+          "min_duration": {
+            "type": "number",
+            "description": "Minimum video duration (in minutes)"
+          },
+          "max_duration": {
+            "type": "number",
+            "description": "Maximum video duration (in minutes)"
+          },
+          "upload_date": {
+            "type": "string",
+            "enum": [
+              "no_limit",
+              "within_one_day",
+              "within_one_week",
+              "within_six_months"
+            ],
+            "description": "Upload date range",
+            "default": "no_limit"
+          },
+          "sort_by": {
+            "type": "string",
+            "enum": [
+              "latest",
+              "popular",
+              "high_views",
+              "comprehensive"
+            ],
+            "description": "Sorting options",
+            "default": "comprehensive"
+          }
+        },
+        "required": [
+          "keyword"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "Bilibili_get_recommend_video",
+      "description": "Bilibili's recommended video feed based on user interests, featuring anime, creator content, and trending videos, with a strong community focus.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "category": {
+            "type": "string",
+            "enum": [
+              "comprehensive",
+              "animation",
+              "gaming",
+              "knowledge",
+              "sports",
+              "fashion",
+              "food",
+              "meme_remix"
+            ],
+            "default": "comprehensive",
+            "description": "video categories"
+          },
+          "upload_date": {
+            "type": "string",
+            "enum": [
+              "no_limit",
+              "within_one_day",
+              "within_one_week",
+              "within_six_months"
+            ],
+            "description": "Upload date range",
+            "default": "no_limit"
+          },
+          "sort_by": {
+            "type": "string",
+            "enum": [
+              "latest",
+              "popular",
+              "high_views",
+              "comprehensive"
+            ],
+            "description": "Sorting options",
+            "default": "comprehensive"
+          }
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "Douyin_get_recommend_video",
+      "description": "Douyin's recommended video feed based on user preferences, delivering short, viral videos across trends, lifestyle, and entertainment for a highly personalized experience.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "category": {
+            "type": "string",
+            "enum": [
+              "comprehensive",
+              "live",
+              "video",
+              "nearby",
+              "following"
+            ],
+            "default": "comprehensive",
+            "description": "video categories"
+          },
+          "upload_date": {
+            "type": "string",
+            "enum": [
+              "no_limit",
+              "within_one_day",
+              "within_one_week",
+              "within_six_months"
+            ],
+            "description": "Upload date range",
+            "default": "no_limit"
+          },
+          "sort_by": {
+            "type": "string",
+            "enum": [
+              "latest",
+              "popular",
+              "high_views",
+              "comprehensive"
+            ],
+            "description": "Sorting options",
+            "default": "comprehensive"
+          }
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "Kuaishou_get_recommend_video",
+      "description": "Kuaishou's recommended video feed based on user behavior, featuring real-life short videos and local stories for a down-to-earth experience.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "category": {
+            "type": "string",
+            "enum": [
+              "comprehensive",
+              "live",
+              "video",
+              "nearby",
+              "following"
+            ],
+            "default": "comprehensive",
+            "description": "video categories"
+          },
+          "upload_date": {
+            "type": "string",
+            "enum": [
+              "no_limit",
+              "within_one_day",
+              "within_one_week",
+              "within_six_months"
+            ],
+            "description": "Upload date range",
+            "default": "no_limit"
+          },
+          "sort_by": {
+            "type": "string",
+            "enum": [
+              "latest",
+              "popular",
+              "high_views",
+              "comprehensive"
+            ],
+            "description": "Sorting options",
+            "default": "comprehensive"
+          }
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "IQIYI_get_recommend_video",
+      "description": "iQIYI's recommended video feed based on viewing history, featuring top dramas, variety shows, and original content with cinematic quality.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "category": {
+            "type": "string",
+            "enum": [
+              "comprehensive",
+              "movie",
+              "variety_show",
+              "anime",
+              "tv_series",
+              "short_drama",
+              "documentary",
+              "sports"
+            ],
+            "default": "comprehensive",
+            "description": "video categories"
+          },
+          "min_duration": {
+            "type": "number",
+            "description": "Minimum video duration (in minutes)"
+          },
+          "max_duration": {
+            "type": "number",
+            "description": "Maximum video duration (in minutes)"
+          },
+          "upload_date": {
+            "type": "string",
+            "enum": [
+              "no_limit",
+              "within_one_day",
+              "within_one_week",
+              "within_six_months"
+            ],
+            "description": "Upload date range",
+            "default": "no_limit"
+          },
+          "sort_by": {
+            "type": "string",
+            "enum": [
+              "latest",
+              "popular",
+              "high_views",
+              "comprehensive"
+            ],
+            "description": "Sorting options",
+            "default": "comprehensive"
+          }
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "TencentVideo_get_recommend_video",
+      "description": "Tencent Video’s personalized content recommendation function. It suggests trending and tailored videos based on user preferences and viewing history, offering an immersive entertainment experience.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "category": {
+            "type": "string",
+            "enum": [
+              "comprehensive",
+              "movie",
+              "variety_show",
+              "anime",
+              "tv_series",
+              "short_drama",
+              "documentary",
+              "sports"
+            ],
+            "default": "comprehensive",
+            "description": "video categories"
+          },
+          "min_duration": {
+            "type": "number",
+            "description": "Minimum video duration (in minutes)"
+          },
+          "max_duration": {
+            "type": "number",
+            "description": "Maximum video duration (in minutes)"
+          },
+          "upload_date": {
+            "type": "string",
+            "enum": [
+              "no_limit",
+              "within_one_day",
+              "within_one_week",
+              "within_six_months"
+            ],
+            "description": "Upload date range",
+            "default": "no_limit"
+          },
+          "sort_by": {
+            "type": "string",
+            "enum": [
+              "latest",
+              "popular",
+              "high_views",
+              "comprehensive"
+            ],
+            "description": "Sorting options",
+            "default": "comprehensive"
+          }
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "Maoyan_search_movie",
+      "description": "Maoyan's movie schedule search based on keywords and location, helping users find showtimes and theaters for specific films.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "keyword": {
+            "type": "string",
+            "description": "Search keywords (e.g., movie name.)"
+          },
+          "sort_by": {
+            "type": "string",
+            "enum": [
+              "recommended_order",
+              "distance_first",
+              "lowest_price_first"
+            ],
+            "default": "recommended_order",
+            "description": "Sorting options"
+          },
+          "start_time": {
+            "type": "string",
+            "description": "Earliest Movie Start Time , format: %H:%M, e.g. 6:30"
+          },
+          "end_time": {
+            "type": "string",
+            "description": "Latest Movie Start Time , format: %H:%M, e.g. 20:30"
+          },
+          "movie_version": {
+            "type": "string",
+            "enum": [
+              "2d",
+              "3d",
+              "no_limit"
+            ],
+            "default": "no_limit",
+            "description": "Movie Version"
+          },
+          "special_effects_theater": {
+            "type": "string",
+            "enum": [
+              "imax",
+              "dolby_atmos",
+              "giant_screen",
+              "laser_projection",
+              "no_limit"
+            ],
+            "default": "no_limit",
+            "description": "different special effects of theater"
+          }
+        },
+        "required": [
+          "keyword"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "Damai_search_movie",
+      "description": "Damai's movie search function based on keywords, helping users find and book film screenings, with a focus on cinema-related events.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "keyword": {
+            "type": "string",
+            "description": "Search keywords (e.g., movie name.)"
+          },
+          "sort_by": {
+            "type": "string",
+            "enum": [
+              "recommended_order",
+              "distance_first",
+              "lowest_price_first"
+            ],
+            "default": "recommended_order",
+            "description": "Sorting options"
+          },
+          "start_time": {
+            "type": "string",
+            "description": "Earliest Movie Start Time , format: %H:%M, e.g. 6:30"
+          },
+          "end_time": {
+            "type": "string",
+            "description": "Latest Movie Start Time , format: %H:%M, e.g. 20:30"
+          },
+          "movie_version": {
+            "type": "string",
+            "enum": [
+              "2d",
+              "3d",
+              "no_limit"
+            ],
+            "default": "no_limit",
+            "description": "Movie Version"
+          },
+          "special_effects_theater": {
+            "type": "string",
+            "enum": [
+              "imax",
+              "dolby_atmos",
+              "giant_screen",
+              "laser_projection",
+              "no_limit"
+            ],
+            "default": "no_limit",
+            "description": "different special effects of theater"
+          }
+        },
+        "required": [
+          "keyword"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "Maoyan_search_show",
+      "description": "Maoyan's show search function based on keywords, helping users discover concerts, theater performances, and live events, with a focus on entertainment booking.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "keyword": {
+            "type": "string",
+            "description": "Search keywords (e.g., artist name,show name etc..)"
+          },
+          "show_type": {
+            "type": "string",
+            "enum": [
+              "all",
+              "concert",
+              "drama_and_musical",
+              "music_concert",
+              "theater_play",
+              "esports_tournament",
+              "sports_event"
+            ],
+            "default": "all",
+            "description": "Performance Type, used to filter shows; \"all\" indicates all content (i.e., no filtering)"
+          },
+          "start_time": {
+            "type": "string",
+            "description": "earliest show's time , format: %Y-%m-%d , e.g. 2024-05-28"
+          },
+          "end_time": {
+            "type": "string",
+            "description": "latest show's time , format: %Y-%m-%d , e.g. 2024-05-28"
+          },
+          "sort_by": {
+            "type": "string",
+            "enum": [
+              "recommended_order",
+              "best-selling",
+              "distance_sorting"
+            ],
+            "default": "recommended_order",
+            "description": "Sorting options"
+          }
+        },
+        "required": [
+          "keyword"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "Damai_search_show",
+      "description": "Damai's show search function based on keywords, helping users find concerts, theater plays, and live events, focused on cultural and entertainment experiences.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "keyword": {
+            "type": "string",
+            "description": "Search keywords (e.g., artist name,show name etc..)"
+          },
+          "show_type": {
+            "type": "string",
+            "enum": [
+              "all",
+              "concert",
+              "drama_and_musical",
+              "music_concert",
+              "theater_play",
+              "esports_tournament",
+              "sports_event"
+            ],
+            "default": "all",
+            "description": "Performance Type, used to filter shows; \"all\" indicates all content (i.e., no filtering)"
+          },
+          "start_time": {
+            "type": "string",
+            "description": "earliest show's time , format: %Y-%m-%d , e.g. 2024-05-28"
+          },
+          "end_time": {
+            "type": "string",
+            "description": "latest show's time , format: %Y-%m-%d , e.g. 2024-05-28"
+          },
+          "sort_by": {
+            "type": "string",
+            "enum": [
+              "recommended_order",
+              "best-selling",
+              "distance_sorting"
+            ],
+            "default": "recommended_order",
+            "description": "Sorting options"
+          }
+        },
+        "required": [
+          "keyword"
+        ]
+      }
+    }
+  }
+]

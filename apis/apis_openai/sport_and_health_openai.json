@@ -1,0 +1,167 @@
+[
+  {
+    "type": "function",
+    "function": {
+      "name": "HUAWEIHealth_log_exercise",
+      "description": "HUAWEI Health's exercise logging exercise records workout data such as type, duration, and calories burned, helping users track fitness progress and maintain a healthy lifestyle.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "category": {
+            "type": "string",
+            "enum": [
+              "outdoor_running",
+              "indoor_running",
+              "yoga",
+              "fitness",
+              "walking",
+              "cycling",
+              "jump_rope",
+              "other"
+            ],
+            "description": "exercising category"
+          },
+          "duration": {
+            "type": "number",
+            "description": "exercising time (in minutes)"
+          }
+        },
+        "required": [
+          "category",
+          "duration"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "KEEP_log_exercise",
+      "description": "KEEP's exercise logging function tracks workout type, duration, and performance, supporting personalized fitness goals and consistent training progress.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "category": {
+            "type": "string",
+            "enum": [
+              "outdoor_running",
+              "indoor_running",
+              "yoga",
+              "fitness",
+              "walking",
+              "cycling",
+              "jump_rope",
+              "other"
+            ],
+            "description": "exercising category"
+          },
+          "duration": {
+            "type": "number",
+            "description": "exercising time (in minutes)"
+          }
+        },
+        "required": [
+          "category",
+          "duration"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "KEEP_search_exercise_plan",
+      "description": "KEEP's exercise plan search function allows users to find personalized workout programs based on goals and fitness levels, focusing on guided training and habit building.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "keyword": {
+            "type": "string",
+            "description": "Search keywords (e.g., exercise type)"
+          },
+          "sort_by": {
+            "type": "string",
+            "enum": [
+              "smart_sorting",
+              "popular",
+              "short_duration",
+              "high_calorie_burn"
+            ],
+            "default": "smart_sorting",
+            "description": "sorting method"
+          },
+          "duration": {
+            "type": "string",
+            "enum": [
+              "all",
+              "more_than_30_min",
+              "15-30min",
+              "less_than_15_min"
+            ],
+            "default": "all",
+            "description": "exercising time range"
+          },
+          "equipment": {
+            "type": "string",
+            "enum": [
+              "all",
+              "no_equipment",
+              "resistance_band",
+              "dumbbell",
+              "barbell",
+              "foam_roller",
+              "fitness_ball",
+              "jump_rope"
+            ],
+            "default": "all",
+            "description": "equipment used in exercising"
+          }
+        },
+        "required": [
+          "keyword"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "HUAWEIHealth_search_exercise_plan",
+      "description": "HUAWEI Health's exercise plan search function helps users find training programs based on fitness goals and health data, focusing on smart, personalized guidance.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "keyword": {
+            "type": "string",
+            "description": "Search keywords (e.g., exercise type)"
+          },
+          "sort_by": {
+            "type": "string",
+            "enum": [
+              "smart_sorting",
+              "popular",
+              "short_duration",
+              "high_calorie_burn"
+            ],
+            "default": "smart_sorting",
+            "description": "sorting method"
+          },
+          "duration": {
+            "type": "string",
+            "enum": [
+              "all",
+              "more_than_30_min",
+              "15-30min",
+              "less_than_15_min"
+            ],
+            "default": "all",
+            "description": "exercising time range"
+          }
+        },
+        "required": [
+          "keyword"
+        ]
+      }
+    }
+  }
+]

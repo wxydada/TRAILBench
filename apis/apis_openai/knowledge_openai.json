@@ -1,0 +1,164 @@
+[
+  {
+    "type": "function",
+    "function": {
+      "name": "Xiaohongshu_get_knowledge",
+      "description": "Xiaohongshu's knowledge content feed, offering lifestyle tips, product reviews, and personal experiences, focused on authentic sharing and community-driven insights.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "keyword": {
+            "type": "string",
+            "description": "Search keywords (e.g., knowledge content, creator name, tags, etc.)"
+          },
+          "category": {
+            "type": "string",
+            "enum": [
+              "hot_searches",
+              "entertainment",
+              "lifestyle",
+              "society",
+              "local"
+            ],
+            "default": "hot_searches",
+            "description": "result category"
+          },
+          "sort_by": {
+            "type": "string",
+            "enum": [
+              "comprehensive",
+              "latest",
+              "most_liked",
+              "most_commented",
+              "most_favorited"
+            ],
+            "default": "comprehensive",
+            "description": "Sorting Criteria"
+          },
+          "release_time": {
+            "type": "string",
+            "enum": [
+              "no_limit",
+              "within_one_day",
+              "within_one_week",
+              "within_six_months"
+            ],
+            "description": "release time range",
+            "default": "no_limit"
+          },
+          "note_type": {
+            "type": "string",
+            "enum": [
+              "no_limit",
+              "video",
+              "image_and_text",
+              "live"
+            ],
+            "default": "no_limit",
+            "description": "type of the note"
+          }
+        },
+        "required": [
+          "keyword"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "Zhihu_get_knowledge",
+      "description": "Zhihu's knowledge feed provides expert answers, in-depth discussions, and user insights on various topics, known for its high-quality, community-curated content.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "keyword": {
+            "type": "string",
+            "description": "Search keywords (e.g., knowledge content, creator name, tags, etc.)"
+          },
+          "category": {
+            "type": "string",
+            "enum": [
+              "no_limit",
+              "answers",
+              "questions",
+              "recently_viewed"
+            ],
+            "default": "no_limit",
+            "description": "result category"
+          },
+          "sort_by": {
+            "type": "string",
+            "enum": [
+              "comprehensive",
+              "latest",
+              "most_liked"
+            ],
+            "default": "comprehensive",
+            "description": "Sorting Criteria"
+          },
+          "release_time": {
+            "type": "string",
+            "enum": [
+              "no_limit",
+              "within_one_day",
+              "within_one_week",
+              "within_one_month",
+              "within_six_months"
+            ],
+            "description": "release time range",
+            "default": "no_limit"
+          }
+        },
+        "required": [
+          "keyword"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "google_get_knowledge",
+      "description": "Google's knowledge search provides quick, accurate answers and broad information from across the web.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "keyword": {
+            "type": "string",
+            "description": "Search keywords (e.g., knowledge content, creator name, tags, etc.)"
+          },
+          "category": {
+            "type": "string",
+            "enum": [
+              "all",
+              "finance",
+              "images",
+              "news",
+              "videos",
+              "webpages",
+              "books"
+            ],
+            "default": "all",
+            "description": "search result category"
+          },
+          "release_time": {
+            "type": "string",
+            "enum": [
+              "no_limit",
+              "within_one_day",
+              "within_one_week",
+              "within_one_month",
+              "within_six_months"
+            ],
+            "description": "release time range",
+            "default": "no_limit"
+          }
+        },
+        "required": [
+          "keyword"
+        ]
+      }
+    }
+  }
+]

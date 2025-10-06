@@ -1,0 +1,97 @@
+[
+{
+  "id": 0,
+  "time": "2025-07-23 18:26",
+  "query": {
+    "Minimum Difficulty": [
+      "Help me find mosquito nets on Taobao, sort them by price from high to low, and make sure they have free shipping."
+    ],
+    "Low Difficulty": [
+      "I need to buy a mosquito net on Taobao, please find some with free shipping.",
+      "Search for mosquito nets for me, and sort the results by price from highest to lowest."
+    ],
+    "Medium Difficulty": [
+      "I'm looking for mosquito nets that come with free shipping.",
+      "Find me some mosquito nets, sorted by price from high to low."
+    ],
+    "High Difficulty": [
+      "Help me find something to keep the bugs away at night."
+    ]
+  },
+  "answer": {
+    "apitype": "shopping",
+    "toolname": "Taobao",
+    "apiname": "search_goods",
+    "parameters": {
+      "keyword": "mosquito net",
+      "sort_by": "price_descending",
+      "arrived_tomorrow": false,
+      "free_shipping": true
+    }
+  },
+  "user_history": "[{\"time\": \"2025-07-16 12:22\", \"apitype\": \"entertainment\", \"toolname\": \"Bilibili\", \"apiname\": \"search_video\", \"fulltoolname\": \"entertainment.Bilibili.search_video\", \"parameters\": {\"keyword\": \"Mingchao\", \"upload_date\": \"no_limit\", \"sort_by\": \"comprehensive\"}}, {\"time\": \"2025-07-16 17:47\", \"apitype\": \"entertainment\", \"toolname\": \"Bilibili\", \"apiname\": \"search_video\", \"fulltoolname\": \"entertainment.Bilibili.search_video\", \"parameters\": {\"keyword\": \"Report bullet screen\", \"upload_date\": \"within_six_months\", \"sort_by\": \"popular\"}}, {\"time\": \"2025-07-16 22:58\", \"apitype\": \"shopping\", \"toolname\": \"Taobao\", \"apiname\": \"search_goods\", \"fulltoolname\": \"shopping.Taobao.search_goods\", \"parameters\": {\"keyword\": \"Eye protector device\", \"sort_by\": \"comprehensive_ranking\", \"arrived_tomorrow\": true, \"free_shipping\": false}}, {\"time\": \"2025-07-17 21:17\", \"apitype\": \"shopping\", \"toolname\": \"Taobao\", \"apiname\": \"search_goods\", \"fulltoolname\": \"shopping.Taobao.search_goods\", \"parameters\": {\"keyword\": \"Socks\", \"sort_by\": \"sales_descending\", \"arrived_tomorrow\": false, \"free_shipping\": true}}, {\"time\": \"2025-07-19 18:34\", \"apitype\": \"shopping\", \"toolname\": \"Taobao\", \"apiname\": \"search_goods\", \"fulltoolname\": \"shopping.Taobao.search_goods\", \"parameters\": {\"keyword\": \"Folding bed\", \"sort_by\": \"comprehensive_ranking\", \"arrived_tomorrow\": false, \"free_shipping\": true}}, {\"time\": \"2025-07-20 10:12\", \"apitype\": \"news\", \"toolname\": \"Toutiao\", \"apiname\": \"get_daily_news\", \"fulltoolname\": \"news.Toutiao.get_daily_news\", \"parameters\": {\"category\": \"hot_searches\"}}, {\"time\": \"2025-07-20 180:12\", \"apitype\": \"transport\", \"toolname\": \"12306\", \"apiname\": \"find_trains\", \"fulltoolname\": \"transport.12306.find_trains\", \"parameters\": {\"start_city\": \"Harbin\", \"end_city\": \"Shanghai\", \"start_date\": \"2025-07-27\", \"train_level\": \"second_class\"}}, {\"time\": \"2025-07-21 08:00\", \"apitype\": \"transport\", \"toolname\": \"GaodeMap\", \"apiname\": \"get_path\", \"fulltoolname\": \"transport.GaodeMap.get_path\", \"parameters\": {\"start_name\": \"Taixin Guodian\", \"end_name\": \"Harbin West Station\", \"cartype\": \"driving\", \"strategy\": \"shortest_distance\"}}, {\"time\": \"2025-07-21 16:54\", \"apitype\": \"shopping\", \"toolname\": \"JD\", \"apiname\": \"search_goods\", \"fulltoolname\": \"shopping.JD.search_goods\", \"parameters\": {\"keyword\": \"Computer webcam\", \"min_price\": 25, \"max_price\": 229, \"sort_by\": \"comprehensive_ranking\", \"arrived_tomorrow\": false, \"free_shipping\": false}}, {\"time\": \"2025-07-22 11:37\", \"apitype\": \"shopping\", \"toolname\": \"其他\", \"apiname\": \"search_goods\", \"fulltoolname\": \"shopping.其他.search_goods\", \"parameters\": {\"appname\": \"Idle Fish\", \"keyword\": \"Creative gift\", \"sort_by\": \"comprehensive_ranking\", \"arrived_tomorrow\": false, \"free_shipping\": true}}, {\"time\": \"2025-07-22 14:06\", \"apitype\": \"news\", \"toolname\": \"Zhihu\", \"apiname\": \"get_daily_news\", \"fulltoolname\": \"news.Zhihu.get_daily_news\", \"parameters\": {\"category\": \"lifestyle\"}}]"
+},
+{
+  "id": 1,
+  "time": "2025-07-25 09:43",
+  "query": {
+    "Minimum Difficulty": [
+      "Please help me book a premium private car from Taixin Guodian to the Ice and Snow World."
+    ],
+    "Low Difficulty": [
+      "Help me call a private car from Taixin Guodian to the Ice and Snow World.",
+      "I want to go from Taixin Guodian to the Ice and Snow World, I need a premium car."
+    ],
+    "Medium Difficulty": [
+      "I need to get a car from Taixin Guodian to the Ice and Snow World.",
+      "I want to go to the Ice and Snow World, please call a private car for me."
+    ],
+    "High Difficulty": [
+      "I'm going out, help me get a car."
+    ]
+  },
+  "answer": {
+    "apitype": "transport",
+    "toolname": "Didi",
+    "apiname": "get_taxi",
+    "parameters": {
+      "start_name": "Taixin Guodian",
+      "end_name": "Ice and Snow World",
+      "product_type": "private_car",
+      "ride_type": "premium"
+    }
+  },
+  "user_history": "[{\"time\": \"2025-07-16 12:22\", \"apitype\": \"entertainment\", \"toolname\": \"Bilibili\", \"apiname\": \"search_video\", \"fulltoolname\": \"entertainment.Bilibili.search_video\", \"parameters\": {\"keyword\": \"Mingchao\", \"upload_date\": \"no_limit\", \"sort_by\": \"comprehensive\"}}, {\"time\": \"2025-07-16 17:47\", \"apitype\": \"entertainment\", \"toolname\": \"Bilibili\", \"apiname\": \"search_video\", \"fulltoolname\": \"entertainment.Bilibili.search_video\", \"parameters\": {\"keyword\": \"Report bullet screen\", \"upload_date\": \"within_six_months\", \"sort_by\": \"popular\"}}, {\"time\": \"2025-07-16 22:58\", \"apitype\": \"shopping\", \"toolname\": \"Taobao\", \"apiname\": \"search_goods\", \"fulltoolname\": \"shopping.Taobao.search_goods\", \"parameters\": {\"keyword\": \"Eye protector device\", \"sort_by\": \"comprehensive_ranking\", \"arrived_tomorrow\": true, \"free_shipping\": false}}, {\"time\": \"2025-07-17 21:17\", \"apitype\": \"shopping\", \"toolname\": \"Taobao\", \"apiname\": \"search_goods\", \"fulltoolname\": \"shopping.Taobao.search_goods\", \"parameters\": {\"keyword\": \"Socks\", \"sort_by\": \"sales_descending\", \"arrived_tomorrow\": false, \"free_shipping\": true}}, {\"time\": \"2025-07-19 18:34\", \"apitype\": \"shopping\", \"toolname\": \"Taobao\", \"apiname\": \"search_goods\", \"fulltoolname\": \"shopping.Taobao.search_goods\", \"parameters\": {\"keyword\": \"Folding bed\", \"sort_by\": \"comprehensive_ranking\", \"arrived_tomorrow\": false, \"free_shipping\": true}}, {\"time\": \"2025-07-20 10:12\", \"apitype\": \"news\", \"toolname\": \"Toutiao\", \"apiname\": \"get_daily_news\", \"fulltoolname\": \"news.Toutiao.get_daily_news\", \"parameters\": {\"category\": \"hot_searches\"}}, {\"time\": \"2025-07-20 180:12\", \"apitype\": \"transport\", \"toolname\": \"12306\", \"apiname\": \"find_trains\", \"fulltoolname\": \"transport.12306.find_trains\", \"parameters\": {\"start_city\": \"Harbin\", \"end_city\": \"Shanghai\", \"start_date\": \"2025-07-27\", \"train_level\": \"second_class\"}}, {\"time\": \"2025-07-21 08:00\", \"apitype\": \"transport\", \"toolname\": \"GaodeMap\", \"apiname\": \"get_path\", \"fulltoolname\": \"transport.GaodeMap.get_path\", \"parameters\": {\"start_name\": \"Taixin Guodian\", \"end_name\": \"Harbin West Station\", \"cartype\": \"driving\", \"strategy\": \"shortest_distance\"}}, {\"time\": \"2025-07-21 16:54\", \"apitype\": \"shopping\", \"toolname\": \"JD\", \"apiname\": \"search_goods\", \"fulltoolname\": \"shopping.JD.search_goods\", \"parameters\": {\"keyword\": \"Computer webcam\", \"min_price\": 25, \"max_price\": 229, \"sort_by\": \"comprehensive_ranking\", \"arrived_tomorrow\": false, \"free_shipping\": false}}, {\"time\": \"2025-07-22 11:37\", \"apitype\": \"shopping\", \"toolname\": \"其他\", \"apiname\": \"search_goods\", \"fulltoolname\": \"shopping.其他.search_goods\", \"parameters\": {\"appname\": \"Idle Fish\", \"keyword\": \"Creative gift\", \"sort_by\": \"comprehensive_ranking\", \"arrived_tomorrow\": false, \"free_shipping\": true}}, {\"time\": \"2025-07-22 14:06\", \"apitype\": \"news\", \"toolname\": \"Zhihu\", \"apiname\": \"get_daily_news\", \"fulltoolname\": \"news.Zhihu.get_daily_news\", \"parameters\": {\"category\": \"lifestyle\"}}, {\"time\": \"2025-07-23 18:26\", \"apitype\": \"shopping\", \"toolname\": \"Taobao\", \"apiname\": \"search_goods\", \"fulltoolname\": \"shopping.Taobao.search_goods\", \"parameters\": {\"keyword\": \"mosquito net\", \"sort_by\": \"price_descending\", \"arrived_tomorrow\": false, \"free_shipping\": true}}, {\"time\": \"2025-07-24 13:00\", \"apitype\": \"transport\", \"toolname\": \"GaodeMap\", \"apiname\": \"get_path\", \"fulltoolname\": \"transport.GaodeMap.get_path\", \"parameters\": {\"start_name\": \"Harbin West Station\", \"end_name\": \"Heilongjiang University\", \"cartype\": \"cycling\", \"strategy\": \"shortest_distance\"}}, {\"time\": \"2025-07-24 17:37\", \"apitype\": \"shopping\", \"toolname\": \"其他\", \"apiname\": \"search_goods\", \"fulltoolname\": \"shopping.其他.search_goods\", \"parameters\": {\"appname\": \"Idle Fish\", \"keyword\": \"Malicious\", \"sort_by\": \"comprehensive_ranking\", \"arrived_tomorrow\": false, \"free_shipping\": true}}, {\"time\": \"2025-07-24 20:23\", \"apitype\": \"transport\", \"toolname\": \"GaodeMap\", \"apiname\": \"get_path\", \"fulltoolname\": \"transport.GaodeMap.get_path\", \"parameters\": {\"start_name\": \"Taixin Guodian\", \"end_name\": \"Harbin Institute of Technology\", \"cartype\": \"cycling\", \"strategy\": \"shortest_distance\"}}]"
+},
+{
+  "id": 2,
+  "time": "2025-07-25 11:25",
+  "query": {
+    "Minimum Difficulty": [
+      "I want to take a premium private car from Ice and Snow World to Baroque Style Street."
+    ],
+    "Low Difficulty": [
+      "I want to get a private car from Ice and Snow World to Baroque Style Street.",
+      "I'm at Ice and Snow World, I want to go to Baroque Style Street, please call a premium car for me."
+    ],
+    "Medium Difficulty": [
+      "Help me get a car from Ice and Snow World to Baroque Style Street.",
+      "I want to go to Baroque Style Street, please call a private car for me."
+    ],
+    "High Difficulty": [
+      "I'm ready for the next stop, call a car for me."
+    ]
+  },
+  "answer": {
+    "apitype": "transport",
+    "toolname": "Didi",
+    "apiname": "get_taxi",
+    "parameters": {
+      "start_name": "Ice and Snow World",
+      "end_name": "Baroque Style Street",
+      "product_type": "private_car",
+      "ride_type": "premium"
+    }
+  },
+  "user_history": "[{\"time\": \"2025-07-16 12:22\", \"apitype\": \"entertainment\", \"toolname\": \"Bilibili\", \"apiname\": \"search_video\", \"fulltoolname\": \"entertainment.Bilibili.search_video\", \"parameters\": {\"keyword\": \"Mingchao\", \"upload_date\": \"no_limit\", \"sort_by\": \"comprehensive\"}}, {\"time\": \"2025-07-16 17:47\", \"apitype\": \"entertainment\", \"toolname\": \"Bilibili\", \"apiname\": \"search_video\", \"fulltoolname\": \"entertainment.Bilibili.search_video\", \"parameters\": {\"keyword\": \"Report bullet screen\", \"upload_date\": \"within_six_months\", \"sort_by\": \"popular\"}}, {\"time\": \"2025-07-16 22:58\", \"apitype\": \"shopping\", \"toolname\": \"Taobao\", \"apiname\": \"search_goods\", \"fulltoolname\": \"shopping.Taobao.search_goods\", \"parameters\": {\"keyword\": \"Eye protector device\", \"sort_by\": \"comprehensive_ranking\", \"arrived_tomorrow\": true, \"free_shipping\": false}}, {\"time\": \"2025-07-17 21:17\", \"apitype\": \"shopping\", \"toolname\": \"Taobao\", \"apiname\": \"search_goods\", \"fulltoolname\": \"shopping.Taobao.search_goods\", \"parameters\": {\"keyword\": \"Socks\", \"sort_by\": \"sales_descending\", \"arrived_tomorrow\": false, \"free_shipping\": true}}, {\"time\": \"2025-07-19 18:34\", \"apitype\": \"shopping\", \"toolname\": \"Taobao\", \"apiname\": \"search_goods\", \"fulltoolname\": \"shopping.Taobao.search_goods\", \"parameters\": {\"keyword\": \"Folding bed\", \"sort_by\": \"comprehensive_ranking\", \"arrived_tomorrow\": false, \"free_shipping\": true}}, {\"time\": \"2025-07-20 10:12\", \"apitype\": \"news\", \"toolname\": \"Toutiao\", \"apiname\": \"get_daily_news\", \"fulltoolname\": \"news.Toutiao.get_daily_news\", \"parameters\": {\"category\": \"hot_searches\"}}, {\"time\": \"2025-07-20 180:12\", \"apitype\": \"transport\", \"toolname\": \"12306\", \"apiname\": \"find_trains\", \"fulltoolname\": \"transport.12306.find_trains\", \"parameters\": {\"start_city\": \"Harbin\", \"end_city\": \"Shanghai\", \"start_date\": \"2025-07-27\", \"train_level\": \"second_class\"}}, {\"time\": \"2025-07-21 08:00\", \"apitype\": \"transport\", \"toolname\": \"GaodeMap\", \"apiname\": \"get_path\", \"fulltoolname\": \"transport.GaodeMap.get_path\", \"parameters\": {\"start_name\": \"Taixin Guodian\", \"end_name\": \"Harbin West Station\", \"cartype\": \"driving\", \"strategy\": \"shortest_distance\"}}, {\"time\": \"2025-07-21 16:54\", \"apitype\": \"shopping\", \"toolname\": \"JD\", \"apiname\": \"search_goods\", \"fulltoolname\": \"shopping.JD.search_goods\", \"parameters\": {\"keyword\": \"Computer webcam\", \"min_price\": 25, \"max_price\": 229, \"sort_by\": \"comprehensive_ranking\", \"arrived_tomorrow\": false, \"free_shipping\": false}}, {\"time\": \"2025-07-22 11:37\", \"apitype\": \"shopping\", \"toolname\": \"其他\", \"apiname\": \"search_goods\", \"fulltoolname\": \"shopping.其他.search_goods\", \"parameters\": {\"appname\": \"Idle Fish\", \"keyword\": \"Creative gift\", \"sort_by\": \"comprehensive_ranking\", \"arrived_tomorrow\": false, \"free_shipping\": true}}, {\"time\": \"2025-07-22 14:06\", \"apitype\": \"news\", \"toolname\": \"Zhihu\", \"apiname\": \"get_daily_news\", \"fulltoolname\": \"news.Zhihu.get_daily_news\", \"parameters\": {\"category\": \"lifestyle\"}}, {\"time\": \"2025-07-23 18:26\", \"apitype\": \"shopping\", \"toolname\": \"Taobao\", \"apiname\": \"search_goods\", \"fulltoolname\": \"shopping.Taobao.search_goods\", \"parameters\": {\"keyword\": \"mosquito net\", \"sort_by\": \"price_descending\", \"arrived_tomorrow\": false, \"free_shipping\": true}}, {\"time\": \"2025-07-24 13:00\", \"apitype\": \"transport\", \"toolname\": \"GaodeMap\", \"apiname\": \"get_path\", \"fulltoolname\": \"transport.GaodeMap.get_path\", \"parameters\": {\"start_name\": \"Harbin West Station\", \"end_name\": \"Heilongjiang University\", \"cartype\": \"cycling\", \"strategy\": \"shortest_distance\"}}, {\"time\": \"2025-07-24 17:37\", \"apitype\": \"shopping\", \"toolname\": \"其他\", \"apiname\": \"search_goods\", \"fulltoolname\": \"shopping.其他.search_goods\", \"parameters\": {\"appname\": \"Idle Fish\", \"keyword\": \"Malicious\", \"sort_by\": \"comprehensive_ranking\", \"arrived_tomorrow\": false, \"free_shipping\": true}}, {\"time\": \"2025-07-24 20:23\", \"apitype\": \"transport\", \"toolname\": \"GaodeMap\", \"apiname\": \"get_path\", \"fulltoolname\": \"transport.GaodeMap.get_path\", \"parameters\": {\"start_name\": \"Taixin Guodian\", \"end_name\": \"Harbin Institute of Technology\", \"cartype\": \"cycling\", \"strategy\": \"shortest_distance\"}}, {\"time\": \"2025-07-25 09:43\", \"apitype\": \"transport\", \"toolname\": \"Didi\", \"apiname\": \"get_taxi\", \"fulltoolname\": \"transport.Didi.get_taxi\", \"parameters\": {\"start_name\": \"Taixin Guodian\", \"end_name\": \"Ice and Snow World\", \"product_type\": \"private_car\", \"ride_type\": \"premium\"}}, {\"time\": \"2025-07-25 11:11\", \"apitype\": \"shopping\", \"toolname\": \"Taobao\", \"apiname\": \"search_goods\", \"fulltoolname\": \"shopping.Taobao.search_goods\", \"parameters\": {\"keyword\": \"McDonald's purchasing代理\", \"sort_by\": \"review_score_descending\", \"free_shipping\": true}}]"
+}

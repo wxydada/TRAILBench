@@ -1,0 +1,638 @@
+[
+  {
+    "type": "function",
+    "function": {
+      "name": "Hello_get_taxi",
+      "description": "Haluo's ride-hailing service, focusing on affordable prices and convenient travel in second- and third-tier cities.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "start_name": {
+            "type": "string",
+            "description": "Starting location name"
+          },
+          "end_name": {
+            "type": "string",
+            "description": "Destination name"
+          },
+          "product_type": {
+            "type": "string",
+            "enum": [
+              "private_car",
+              "express_car",
+              "taxi"
+            ],
+            "description": "Type of service, including private_car, express_car, and taxi"
+          },
+          "ride_type": {
+            "type": "string",
+            "description": "Capacity type. Based on product type: private_car includes comfort and business types; express_car includes economy and premium types; taxi includes taxi."
+          },
+          "departure_time": {
+            "type": "string",
+            "description": "Departure time, default is now",
+            "default": "now"
+          },
+          "waiting_time": {
+            "type": "number",
+            "description": "Maximum waiting time in minutes"
+          },
+          "max_price": {
+            "type": "number",
+            "description": "Maximum price"
+          }
+        },
+        "required": [
+          "start_name",
+          "end_name",
+          "product_type",
+          "ride_type"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "Didi_get_taxi",
+      "description": "Didi's ride-hailing service, offering multiple vehicle types, covering the whole country, suitable for efficient commuting and intercity travel.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "start_name": {
+            "type": "string",
+            "description": "Starting location name"
+          },
+          "end_name": {
+            "type": "string",
+            "description": "Destination name"
+          },
+          "product_type": {
+            "type": "string",
+            "enum": [
+              "private_car",
+              "express_car",
+              "taxi"
+            ],
+            "description": "Type of service, including private_car, express_car, and taxi"
+          },
+          "ride_type": {
+            "type": "string",
+            "description": "Capacity type. Based on product type: private_car includes comfort and business types; express_car includes economy and premium types; taxi includes taxi."
+          },
+          "departure_time": {
+            "type": "string",
+            "description": "Departure time, default is now",
+            "default": "now"
+          },
+          "waiting_time": {
+            "type": "number",
+            "description": "Maximum waiting time in minutes"
+          },
+          "max_price": {
+            "type": "number",
+            "description": "Maximum price"
+          }
+        },
+        "required": [
+          "start_name",
+          "end_name",
+          "product_type",
+          "ride_type"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "FlowerPig_get_taxi",
+      "description": "Huaxiaozhu's ride-hailing service, focusing on affordable pricing, suitable for young users and short daily trips.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "start_name": {
+            "type": "string",
+            "description": "Starting location name"
+          },
+          "end_name": {
+            "type": "string",
+            "description": "Destination name"
+          },
+          "product_type": {
+            "type": "string",
+            "enum": [
+              "private_car",
+              "express_car",
+              "taxi"
+            ],
+            "description": "Type of service, including private_car, express_car, and taxi"
+          },
+          "ride_type": {
+            "type": "string",
+            "description": "Capacity type. Based on product type: private_car includes comfort and business types; express_car includes economy and premium types; taxi includes taxi."
+          },
+          "departure_time": {
+            "type": "string",
+            "description": "Departure time, default is now",
+            "default": "now"
+          },
+          "waiting_time": {
+            "type": "number",
+            "description": "Maximum waiting time in minutes"
+          },
+          "max_price": {
+            "type": "number",
+            "description": "Maximum price"
+          }
+        },
+        "required": [
+          "start_name",
+          "end_name",
+          "product_type",
+          "ride_type"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "T3_get_taxi",
+      "description": "T3 Mobility’s ride-hailing service, emphasizing safety and compliance, jointly developed by major automotive companies, suitable for users who value service quality.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "start_name": {
+            "type": "string",
+            "description": "Starting location name"
+          },
+          "end_name": {
+            "type": "string",
+            "description": "Destination name"
+          },
+          "product_type": {
+            "type": "string",
+            "enum": [
+              "private_car",
+              "express_car",
+              "taxi"
+            ],
+            "description": "Type of service, including private_car, express_car, and taxi"
+          },
+          "ride_type": {
+            "type": "string",
+            "description": "Capacity type. Based on product type: private_car includes comfort and business types; express_car includes economy and premium types; taxi includes taxi."
+          },
+          "departure_time": {
+            "type": "string",
+            "description": "Departure time, default is now",
+            "default": "now"
+          },
+          "waiting_time": {
+            "type": "number",
+            "description": "Maximum waiting time in minutes"
+          },
+          "max_price": {
+            "type": "number",
+            "description": "Maximum price"
+          }
+        },
+        "required": [
+          "start_name",
+          "end_name",
+          "product_type",
+          "ride_type"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GaodeMap_get_path",
+      "description": "Gaode Map's route planning function, providing accurate route recommendations.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "start_name": {
+            "type": "string",
+            "description": "Starting point name"
+          },
+          "end_name": {
+            "type": "string",
+            "description": "Destination name"
+          },
+          "cartype": {
+            "type": "string",
+            "enum": [
+              "driving",
+              "cycling",
+              "walking",
+              "public_transit"
+            ],
+            "description": "Options include driving, cycling, walking, and public transit; default is driving",
+            "default": "driving"
+          },
+          "strategy": {
+            "type": "string",
+            "enum": [
+              "shortest_distance",
+              "fewest_traffic_lights",
+              "least_congestion",
+              "recommended",
+              "subway_first",
+              "shortest_time",
+              "fewest_transfers",
+              "least_walking",
+              "no_subway"
+            ],
+            "description": "Path choosing strategy. This parameter is required only when cartype is driving,cycling or public_transit. Options only include shortest_distance,fewest_traffic_lights and least_congestion, default is shortest distance. When cartype is public_transit, options only include recommended,subway_first,shortest_time,fewest_transfers,least_walking,no_subway, default is recommended."
+          }
+        },
+        "required": [
+          "start_name",
+          "end_name",
+          "cartype"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "BaiduMap_get_path",
+      "description": "Baidu Map's route planning feature, offering detailed road networks, real-time traffic data, and accurate live conditions.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "start_name": {
+            "type": "string",
+            "description": "Starting point name"
+          },
+          "end_name": {
+            "type": "string",
+            "description": "Destination name"
+          },
+          "cartype": {
+            "type": "string",
+            "enum": [
+              "driving",
+              "cycling",
+              "walking",
+              "public_transit"
+            ],
+            "description": "Options include driving, cycling, walking, and public transit; default is driving",
+            "default": "driving"
+          },
+          "strategy": {
+            "type": "string",
+            "enum": [
+              "shortest_distance",
+              "fewest_traffic_lights",
+              "least_congestion",
+              "recommended",
+              "subway_first",
+              "shortest_time",
+              "fewest_transfers",
+              "least_walking",
+              "no_subway"
+            ],
+            "description": "Path choosing strategy. This parameter is required only when cartype is driving,cycling or public_transit. Options only include shortest_distance,fewest_traffic_lights and least_congestion, default is shortest distance. When cartype is public_transit, options only include recommended,subway_first,shortest_time,fewest_transfers,least_walking,no_subway, default is recommended."
+          }
+        },
+        "required": [
+          "start_name",
+          "end_name",
+          "cartype"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "TencentMap_get_path",
+      "description": "Tencent Map's route planning function, integrated with the WeChat ecosystem to provide smooth and convenient navigation experience.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "start_name": {
+            "type": "string",
+            "description": "Starting point name"
+          },
+          "end_name": {
+            "type": "string",
+            "description": "Destination name"
+          },
+          "cartype": {
+            "type": "string",
+            "enum": [
+              "driving",
+              "cycling",
+              "walking",
+              "public_transit"
+            ],
+            "description": "Options include driving, cycling, walking, and public transit; default is driving",
+            "default": "driving"
+          },
+          "strategy": {
+            "type": "string",
+            "enum": [
+              "shortest_distance",
+              "fewest_traffic_lights",
+              "least_congestion",
+              "recommended",
+              "subway_first",
+              "shortest_time",
+              "fewest_transfers",
+              "least_walking",
+              "no_subway"
+            ],
+            "description": "Path choosing strategy. This parameter is required only when cartype is driving,cycling or public_transit. Options only include shortest_distance,fewest_traffic_lights and least_congestion, default is shortest distance. When cartype is public_transit, options only include recommended,subway_first,shortest_time,fewest_transfers,least_walking,no_subway, default is recommended."
+          }
+        },
+        "required": [
+          "start_name",
+          "end_name",
+          "cartype"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "Ctrip_find_flights",
+      "description": "Ctrip's flight search function allows real-time global route lookup, price and time comparison, suitable for various travel booking scenarios.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "start_city": {
+            "type": "string",
+            "description": "Departure city name"
+          },
+          "end_city": {
+            "type": "string",
+            "description": "Arrival city name"
+          },
+          "start_date": {
+            "type": "string",
+            "description": "Departure date (format: yyyy-MM-dd , e.g. 2024-05-28)"
+          },
+          "plane_level": {
+            "type": "string",
+            "enum": [
+              "economy_class",
+              "business_class",
+              "first_class"
+            ],
+            "description": "Cabin class type"
+          },
+          "airline_code": {
+            "type": "string",
+            "description": "Airline code"
+          },
+          "sort_method": {
+            "type": "string",
+            "enum": [
+              "price_high_to_low",
+              "price_low_to_high",
+              "time_early_to_late",
+              "time_late_to_early",
+              "duration_short_to_long"
+            ],
+            "description": "Sorting method"
+          },
+          "has_wifi": {
+            "type": "boolean",
+            "description": "Whether Wi-Fi is available: it is True if only show flights with Wi-Fi else false to show all flights"
+          },
+          "free_shipping": {
+            "type": "boolean",
+            "description": "Whether free checked baggage is available: it is True if only show flights with free baggage else false to show all flights"
+          },
+          "high_punctuality": {
+            "type": "boolean",
+            "description": "Whether high punctuality is available: it is True if only show high punctuality flights else false to show all flights"
+          }
+        },
+        "required": [
+          "start_city",
+          "end_city",
+          "start_date"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "Fliggy_find_flights",
+      "description": "Fliggy's flight search function focuses on discounted fares and platform-exclusive deals, suitable for flexible and vacation bookings.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "start_city": {
+            "type": "string",
+            "description": "Departure city name"
+          },
+          "end_city": {
+            "type": "string",
+            "description": "Arrival city name"
+          },
+          "start_date": {
+            "type": "string",
+            "description": "Departure date (format: yyyy-MM-dd , e.g. 2024-05-28)"
+          },
+          "plane_level": {
+            "type": "string",
+            "enum": [
+              "economy_class",
+              "business_class",
+              "first_class"
+            ],
+            "description": "Cabin class type"
+          },
+          "airline_code": {
+            "type": "string",
+            "description": "Airline code"
+          },
+          "sort_method": {
+            "type": "string",
+            "enum": [
+              "price_high_to_low",
+              "price_low_to_high",
+              "time_early_to_late",
+              "time_late_to_early",
+              "duration_short_to_long"
+            ],
+            "description": "Sorting method"
+          },
+          "has_wifi": {
+            "type": "boolean",
+            "description": "Whether Wi-Fi is available: it is True if only show flights with Wi-Fi else false to show all flights"
+          },
+          "free_shipping": {
+            "type": "boolean",
+            "description": "Whether free checked baggage is available: it is True if only show flights with free baggage else false to show all flights"
+          },
+          "high_punctuality": {
+            "type": "boolean",
+            "description": "Whether high punctuality is available: it is True if only show high punctuality flights else false to show all flights"
+          }
+        },
+        "required": [
+          "start_city",
+          "end_city",
+          "start_date"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "Qunar_find_flights",
+      "description": "Qunar's flight search function focuses on real-time price comparison across the web, aggregating discounted tickets from smaller platforms to provide cost-effective options.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "start_city": {
+            "type": "string",
+            "description": "Departure city name"
+          },
+          "end_city": {
+            "type": "string",
+            "description": "Arrival city name"
+          },
+          "start_date": {
+            "type": "string",
+            "description": "Departure date (format: yyyy-MM-dd , e.g. 2024-05-28)"
+          },
+          "plane_level": {
+            "type": "string",
+            "enum": [
+              "economy_class",
+              "business_class",
+              "first_class"
+            ],
+            "description": "Cabin class type"
+          },
+          "airline_code": {
+            "type": "string",
+            "description": "Airline code"
+          },
+          "sort_method": {
+            "type": "string",
+            "enum": [
+              "price_high_to_low",
+              "price_low_to_high",
+              "time_early_to_late",
+              "time_late_to_early",
+              "duration_short_to_long"
+            ],
+            "description": "Sorting method"
+          },
+          "has_wifi": {
+            "type": "boolean",
+            "description": "Whether Wi-Fi is available: it is True if only show flights with Wi-Fi else false to show all flights"
+          },
+          "free_shipping": {
+            "type": "boolean",
+            "description": "Whether free checked baggage is available: it is True if only show flights with free baggage else false to show all flights"
+          },
+          "high_punctuality": {
+            "type": "boolean",
+            "description": "Whether high punctuality is available: it is True if only show high punctuality flights else false to show all flights"
+          }
+        },
+        "required": [
+          "start_city",
+          "end_city",
+          "start_date"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "12306_find_trains",
+      "description": "12306's train ticket search function provides official real-time data, high_speed rail and train info and booking.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "start_city": {
+            "type": "string",
+            "description": "Departure city name"
+          },
+          "end_city": {
+            "type": "string",
+            "description": "Arrival city name"
+          },
+          "start_date": {
+            "type": "string",
+            "description": "Departure date (format: yyyy-MM-dd , e.g. 2024-05-28)"
+          },
+          "sort_method": {
+            "type": "string",
+            "enum": [
+              "time_early_to_late",
+              "price_low_to_high",
+              "duration_short_to_long"
+            ],
+            "description": "Sorting method: default is time early to late",
+            "default": "time_early_to_late"
+          },
+          "train_level": {
+            "type": "string",
+            "enum": [
+              "second_class",
+              "first_class",
+              "business_class",
+              "soft_sleeper",
+              "hard_sleeper"
+            ],
+            "description": "Cabin class type"
+          },
+          "train_type": {
+            "type": "string",
+            "enum": [
+              "high_speed",
+              "bullet",
+              "regular"
+            ],
+            "description": "Train type, default is high_speed",
+            "default": "high_speed"
+          }
+        },
+        "required": [
+          "start_city",
+          "end_city",
+          "start_date",
+          "train_level"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "12306_find_stations",
+      "description": "12306's station lookup function provides nationwide railway station information and supports departure/arrival station search.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "start_city": {
+            "type": "string",
+            "description": "Departure city name"
+          }
+        },
+        "required": [
+          "start_city"
+        ]
+      }
+    }
+  }
+]

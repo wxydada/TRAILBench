@@ -1,0 +1,94 @@
+[
+  {
+    "type": "function",
+    "function": {
+      "name": "SystemClock_add_alarm",
+      "description": "Alarm setting function of the system clock, supports custom time reminders, suitable for daily routines or important events.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "time": {
+            "type": "string",
+            "description": "Time, format: %H:%M, e.g. 15:30"
+          },
+          "message": {
+            "type": "string",
+            "description": "Event description"
+          },
+          "remind_time": {
+            "type": "string",
+            "enum": [
+              "everyday",
+              "today_only",
+              "weekdays_only",
+              "weekends_only"
+            ],
+            "description": "remind_time strategy, default is everyday"
+          }
+        },
+        "required": [
+          "time",
+          "message",
+          "remind_time"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "SystemClock_add_event",
+      "description": "Event creation function of the system clock, supports scheduling reminders for better management of important plans and arrangements.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "start_time": {
+            "type": "string",
+            "description": "Start time, format: %Y-%m-%d %H:%M, e.g. 2024-05-28 15:30"
+          },
+          "end_time": {
+            "type": "string",
+            "description": "End time, format: %Y-%m-%d %H:%M, e.g. 2024-05-28 15:30"
+          },
+          "title": {
+            "type": "string",
+            "description": "Event title"
+          },
+          "description": {
+            "type": "string",
+            "description": "Detailed description of the event"
+          }
+        },
+        "required": [
+          "start_time",
+          "end_time",
+          "title"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "SystemClock_view_event_by_time",
+      "description": "View events of the day based on specified start and end times.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "start_time": {
+            "type": "string",
+            "description": "Start time, format: %Y-%m-%d %H:%M, e.g. 2024-05-28 15:30"
+          },
+          "end_time": {
+            "type": "string",
+            "description": "End time, format: %Y-%m-%d %H:%M, e.g. 2024-05-28 15:30"
+          }
+        },
+        "required": [
+          "start_time",
+          "end_time"
+        ]
+      }
+    }
+  }
+]

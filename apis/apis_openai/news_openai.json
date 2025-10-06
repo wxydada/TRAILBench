@@ -1,0 +1,77 @@
+[
+  {
+    "type": "function",
+    "function": {
+      "name": "Weibo_get_daily_news",
+      "description": "Get Weibo's top daily news and trending topics in real time.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "category": {
+            "type": "string",
+            "enum": [
+              "hot_searches",
+              "entertainment",
+              "lifestyle",
+              "society",
+              "local"
+            ],
+            "default": "hot_searches",
+            "description": "news category"
+          }
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "Zhihu_get_daily_news",
+      "description": "Zhihu's daily news feed delivers trending topics, expert commentary, and in-depth discussions, focused on timely and insightful content from a knowledgeable community.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "category": {
+            "type": "string",
+            "enum": [
+              "hot_searches",
+              "entertainment",
+              "lifestyle",
+              "society",
+              "local"
+            ],
+            "default": "hot_searches",
+            "description": "news category"
+          }
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "Hupu_get_daily_news",
+      "description": "Hupu's daily news feed provides the latest updates on sports events, player news, and fan discussions, focused on basketball, football, and other popular sports.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "category": {
+            "type": "string",
+            "enum": [
+              "all",
+              "nba",
+              "cba",
+              "football",
+              "esports"
+            ],
+            "default": "all",
+            "description": "news category"
+          }
+        },
+        "required": []
+      }
+    }
+  }
+]
