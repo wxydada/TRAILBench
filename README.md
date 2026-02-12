@@ -1,2 +1,3 @@
-# TRACEBench
-The implementation for TRACEBench: Personalized Function Calling Benchmark Based on Real-World Human Interaction.
+# PATCHBench
+
+The implementation for PATCHBench: Personalized Function Calling Benchmark Grounded in Real-world User Histories
