@@ -638,7 +638,7 @@
       "toolname": "google",
       "apiname": "get_knowledge",
       "parameters": {
-        "keyword": "当然，请提供您需要翻译的内容。",
+        "keyword": "band structure",
         "release_time": "within_six_months"
       }
     },
@@ -901,3 +901,4 @@
   }
 
 ]
+
