@@ -1,3 +1,3 @@
-# PATCHBench
+# TRAILBench
 
-The implementation for PATCHBench: Personalized Function Calling Benchmark Grounded in Real-world User Histories
+The implementation for TRAILBench: Personalized Function Calling Benchmark Grounded in Real-world User Histories
