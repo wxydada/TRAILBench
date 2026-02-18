@@ -302,6 +302,81 @@
   {
     "type": "function",
     "function": {
+      "name": "DianPing_search_restaurant",
+      "description": "DianPing's restaurant search function based on cuisine, location, and restaurant name, leveraging its vast database of authentic user reviews and local ratings, suitable for exploring popular dining spots and trusted recommendations.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "location": {
+            "type": "string",
+            "description": "Location name, not necessarily very precise"
+          },
+          "name": {
+            "type": "string",
+            "description": "Restaurant name"
+          },
+          "is_delivery": {
+            "type": "boolean",
+            "description": "Delivery or dine-in, it is True if delivery else False for dine-in"
+          },
+          "food": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of food names to order"
+          },
+          "order_by": {
+            "type": "string",
+            "enum": [
+              "default_sorting",
+              "rating_high_to_low",
+              "average_price_low_to_high",
+              "sales_high_to_Low",
+              "delivery_speed_fast_to_slow",
+              "distance_near_to_far",
+              "order_count_high_to_low"
+            ],
+            "description": "Sorting options: default_sorting ; rating_high_to_low ; average_price_low_to_high ; sales_high_to_Low ; delivery_speed_fast_to_slow ; distance_near_to_far and order_count_high_to_low, default is default_sorting",
+            "default": "default_sorting"
+          },
+          "min_price": {
+            "type": "number",
+            "description": "Minimum price"
+          },
+          "max_price": {
+            "type": "number",
+            "description": "Maximum price"
+          },
+          "meal_type": {
+            "type": "string",
+            "enum": [
+              "breakfast",
+              "lunch",
+              "afternoon_tea",
+              "dinner",
+              "night_snack"
+            ],
+            "description": "Meal type"
+          },
+          "disliked_foods": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Disliked foods, such as [\"coriander\", \"chili\"]"
+          }
+        },
+        "required": [
+          "name",
+          "is_delivery"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
       "name": "KFC_search_restaurant",
       "description": "KFC's exclusive in-app ordering function",
       "parameters": {

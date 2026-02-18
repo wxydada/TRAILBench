@@ -558,6 +558,64 @@
   {
     "type": "function",
     "function": {
+      "name": "MangoTV_search_video",
+      "description": "Search MangoTV’s exclusive variety shows, original dramas, and trending youth entertainment with ease.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "keyword": {
+            "type": "string",
+            "description": "Search keywords (e.g., video title, creator, tags, etc.)"
+          },
+          "category": {
+            "type": "string",
+            "enum": [
+              "comprehensive",
+              "live",
+              "video"
+            ],
+            "description": "video categories"
+          },
+          "min_duration": {
+            "type": "number",
+            "description": "Minimum video duration (in minutes)"
+          },
+          "max_duration": {
+            "type": "number",
+            "description": "Maximum video duration (in minutes)"
+          },
+          "upload_date": {
+            "type": "string",
+            "enum": [
+              "no_limit",
+              "within_one_day",
+              "within_one_week",
+              "within_six_months"
+            ],
+            "description": "Upload date range",
+            "default": "no_limit"
+          },
+          "sort_by": {
+            "type": "string",
+            "enum": [
+              "latest",
+              "popular",
+              "high_views",
+              "comprehensive"
+            ],
+            "description": "Sorting options",
+            "default": "comprehensive"
+          }
+        },
+        "required": [
+          "keyword"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
       "name": "Maoyan_search_movie",
       "description": "Maoyan's movie schedule search based on keywords and location, helping users find showtimes and theaters for specific films.",
       "parameters": {

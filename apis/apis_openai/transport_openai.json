@@ -558,6 +558,71 @@
   {
     "type": "function",
     "function": {
+      "name": "CEAir_find_flights",
+      "description": "CEAir's flight search function supporting domestic and international routes, leveraging China Eastern Airlines' extensive network and competitive schedules, suitable for efficiently finding and booking flights.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "start_city": {
+            "type": "string",
+            "description": "Departure city name"
+          },
+          "end_city": {
+            "type": "string",
+            "description": "Arrival city name"
+          },
+          "start_date": {
+            "type": "string",
+            "description": "Departure date (format: yyyy-MM-dd , e.g. 2024-05-28)"
+          },
+          "plane_level": {
+            "type": "string",
+            "enum": [
+              "economy_class",
+              "business_class",
+              "first_class"
+            ],
+            "description": "Cabin class type"
+          },
+          "airline_code": {
+            "type": "string",
+            "description": "Airline code"
+          },
+          "sort_method": {
+            "type": "string",
+            "enum": [
+              "price_high_to_low",
+              "price_low_to_high",
+              "time_early_to_late",
+              "time_late_to_early",
+              "duration_short_to_long"
+            ],
+            "description": "Sorting method"
+          },
+          "has_wifi": {
+            "type": "boolean",
+            "description": "Whether Wi-Fi is available: it is True if only show flights with Wi-Fi else false to show all flights"
+          },
+          "free_shipping": {
+            "type": "boolean",
+            "description": "Whether free checked baggage is available: it is True if only show flights with free baggage else false to show all flights"
+          },
+          "high_punctuality": {
+            "type": "boolean",
+            "description": "Whether high punctuality is available: it is True if only show high punctuality flights else false to show all flights"
+          }
+        },
+        "required": [
+          "start_city",
+          "end_city",
+          "start_date"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
       "name": "12306_find_trains",
       "description": "12306's train ticket search function provides official real-time data, high_speed rail and train info and booking.",
       "parameters": {
