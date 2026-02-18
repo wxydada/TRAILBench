@@ -16,7 +16,7 @@ Fold appendix include the Dataset Details and Implemention details in our paper.
 conda create -n TRAILBench python=3.10
 conda activate TRAILBench
 
-git clone --depth 1 https://github.com/wxydada/TRAILBench.git
+git clone https://github.com/wxydada/TRAILBench.git
 
 cd TRAILBench
 
@@ -53,4 +53,5 @@ set up your api key and base url in [`config.yaml`](config.yaml). For more speci
 python predict_api.py
 ```
 You can find the predict results in `output_dir` repository.
+
 
