@@ -9,7 +9,6 @@ gpu_memory_utilization: 0.8
 
 
 ## api model settings
-## OPENAI_API_KEY: sk-2pF3xKoecbEj1YvT1029C5Ab1d794270B03fB71c4e71870f (old)
 OPENAI_API_KEY: 
 OPENAI_BASE_URL: 
 api_model_name: gpt-4o
